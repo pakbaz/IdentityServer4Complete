@@ -67,6 +67,7 @@ namespace IdentityServer
                     options.Events.RaiseSuccessEvents = true;
                 })
                 .AddAspNetIdentity<ApplicationUser>()
+                .AddProfileService<IdentityProfileService>()
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = b => b.UseSqlServer(connectionString,

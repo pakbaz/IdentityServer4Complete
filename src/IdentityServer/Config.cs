@@ -24,13 +24,7 @@ namespace IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                new ApiScope("default_api", "Test API",
-                    new []
-                    {
-                        ClaimTypes.NameIdentifier,
-                        ClaimTypes.UserData,
-                        ClaimTypes.Email
-                    })
+                new ApiScope("default_api", "Test API")
             };
 
         public static IEnumerable<Client> Clients =>

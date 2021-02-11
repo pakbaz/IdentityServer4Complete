@@ -52,6 +52,13 @@ namespace Api {
                     policy.RequireClaim("http://schemas.microsoft.com/claims/authnmethodsreferences", new[] { "pwd" });
                     policy.RequireClaim(ClaimTypes.Email);
                 });
+                options.AddPolicy("AdminScope", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("scope", "default_api");
+                    policy.RequireClaim("http://schemas.microsoft.com/claims/authnmethodsreferences", new[] { "pwd" });
+                    policy.RequireClaim(ClaimTypes.Role,"Admin");
+                });
             });
         }
 
