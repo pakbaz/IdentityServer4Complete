@@ -1,5 +1,5 @@
 # IdentityServer4Complete
-Complete Identity Server 4 Asp.net Identity Role Based Solution with both Client Credential and Resource Owner Password Grany Type. 
+Complete OpenID Connect STS, Client, Resource Implementation. OIDC Uses Identity Server 4 Asp.net Identity Role Based Solution with both Client Credential and Resource Owner Password Grany Type. 
 
 ## Features
 - IdentityServer4 Full STS Implementation. (STS here refers to IdentityServer Project)
@@ -10,7 +10,7 @@ Complete Identity Server 4 Asp.net Identity Role Based Solution with both Client
 - Database Seeding with Configuration and Identity Users (with roles) examples
 - Registration and Login API Endpoints in STS
 - Headless/Cookieless No UI Implementation and API call and token exchange for Both Native and SPA apps
-
+- Certificate Generator for production use is added but using rolling certificate generator services like Azure KeyVault is highly recommended
 
 ## How to Use?
 1. Modify ConnectionString on IdentityServer configuration (Use Sqlite or any other ef core provider for database)
